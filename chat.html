@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat del juego - Router Guardián</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="top azul">
+    <span>Chat del juego</span>
+    <span id="conexion" class="pastilla no">Conectando…</span>
+  </div>
+
+  <div class="caja">
+    <div id="lista" class="chat-lista"></div>
+  </div>
+
+  <form id="form" class="chat-form" autocomplete="off">
+    <input id="texto" type="text" placeholder="Escribí un mensaje…" aria-label="Mensaje" required>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script src="https://unpkg.com/mqtt@5.10.1/dist/mqtt.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/mqtt-conexion.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>

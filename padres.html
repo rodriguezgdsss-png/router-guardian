@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel de los padres - Router Guardián</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="top">
+    <span>Panel de los padres</span>
+    <span id="maqueta" class="pastilla no">Maqueta desconectada</span>
+  </div>
+
+  <div class="caja">
+    <div id="estado" class="estado gris">Conectando…</div>
+
+    <button id="visto" class="btn rojo" disabled>Visto — apagar alarma</button>
+
+    <label class="opciones">
+      <input type="checkbox" id="aviso">
+      Sonido y vibración cuando llega una alerta
+    </label>
+
+    <h3>Mensajes sospechosos</h3>
+    <p id="vacio" class="chico">No se detectó nada sospechoso.</p>
+    <div id="lista"></div>
+    <button id="borrar" class="btn" type="button">Borrar la lista</button>
+  </div>
+
+  <script src="https://unpkg.com/mqtt@5.10.1/dist/mqtt.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/mqtt-conexion.js"></script>
+  <script src="js/padres.js"></script>
+</body>
+</html>
